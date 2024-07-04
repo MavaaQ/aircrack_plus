@@ -28,5 +28,5 @@ sudo apt install wget
 wget bit.ly/aircrack_plus
 ```
 ```
-bash aircrack+
+bash aircrack_plus
 ```
