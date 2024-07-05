@@ -6,6 +6,7 @@
 
 - this script is using aircrack
 - need downloaded aircrack to work
+- if you have another name of wifi adapter then wlp1s0, you must change it on 
 
 ## Usage:
 
