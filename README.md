@@ -9,11 +9,11 @@
 - if you have another name of wifi adapter then wlp1s0, you must change it on
 
 ## Disclaimer:
-Usage of aircrack+ for attacking targets without prior mutual consent is illegal. It's the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program. Only use for educational purposes.
+usage of aircrack+ for attacking targets without prior mutual consent is illegal. It's the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program. Only use for educational purposes.
 
 ## Usage:
 
-Run these commands to use aircrack+
+run these commands to use aircrack+
 
 ### For Linux:
 
