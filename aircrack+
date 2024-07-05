@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Funkce pro vypsání menu
+# menu
 print_menu() {
-    echo -e "\e[32mVyberte možnost:\e[0m"
+    echo -e "\e[32mSelect an option:\e[0m"
     echo -e "\e[94m1. \e[36mScan\e[0m"
     echo -e "\e[94m2. Router \e[36mScan\e[0m"
     echo -e "\e[94m3. \e[37mDeAuth \e[94mDevice\e[0m"
@@ -12,11 +12,9 @@ print_menu() {
     echo -e "\e[32m 			aircrack+ \e[94mby MavaaQ\e[0m"
 }
 
-# Spusteni potrebnych prikazu na zacatku
 sudo airmon-ng check kill
 sudo airmon-ng start wlp1s0
 
-# Hlavni cast skriptu
 while true; do
     print_menu
     read -p "Choice: " choice
@@ -25,18 +23,18 @@ while true; do
             sudo airodump-ng wlp1s0mon
             ;;
         2)  # Router Scan
-            read -p "Zadejte kanál: " channel
-            read -p "Zadejte MAC adresu routeru: " router_mac
+            read -p "Enter channel: " channel
+            read -p "Enter router MAC adress: " router_mac
             sudo airodump-ng --channel $channel --bssid $router_mac wlp1s0mon
             ;;
         3)  # DeAuth Device
-            read -p "Zadejte MAC adresu routeru: " first_mac
-            read -p "Zadejte MAC adresu uživatele: " second_mac
+            read -p "Enter router MAC adress: " first_mac
+            read -p "Enter user MAC adress: " second_mac
             sudo aireplay-ng --deauth 9999 -a $first_mac -c $second_mac wlp1s0mon
             ;;
         4)  # DeAuth Router
-            read -p "Zadejte kanál: " channel
-            read -p "Zadejte MAC adresu routeru: " router_mac
+            read -p "Enter channel: " channel
+            read -p "Enter router MAC adress: " router_mac
             sudo airodump-ng 
             ;;
         5)  # Exit
@@ -44,8 +42,8 @@ while true; do
             sudo service NetworkManager restart
             exit 0
             ;;
-        *)  # Neplatná volba
-            echo "Neplatná volba."
+        *)  # Invalid choice
+            echo "Invalid choice."
             ;;
     esac
 done
