@@ -6,7 +6,7 @@
 
 - this script is using aircrack
 - need downloaded aircrack to work
-- if you have another name of wifi adapter then wlp1s0, you must change it on
+- check name of your wifi adapter using iwconfig!!!
 
 ## Disclaimer:
 usage of aircrack+ for attacking targets without prior mutual consent is illegal. It's the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program. Only use for educational purposes.
